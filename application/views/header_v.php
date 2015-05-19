@@ -63,8 +63,8 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li>
-                        <a href=""><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                     <li>
+                        <a href="<?php echo base_url(); ?>dashboard/"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url(); ?>tipe_kamar/"><i class="fa fa-fw fa-bar-chart-o"></i> Tipe Kamar</a>
@@ -73,7 +73,16 @@
                         <a href="<?php echo base_url(); ?>kamar/"><i class="fa fa-fw fa-table"></i> Kamar</a>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-fw fa-edit"></i> Booking</a>
+                        <a href="<?php echo base_url(); ?>data_penginap/"><i class="fa fa-fw fa-desktop"></i> Penginap</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url(); ?>booking/"><i class="fa fa-fw fa-edit"></i> Booking</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url(); ?>check_in/"><i class="fa fa-fw fa-edit"></i> Check In</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url(); ?>check_out/"><i class="fa fa-fw fa-edit"></i> Check Out</a>
                     </li>
                 </ul>
             </div>
