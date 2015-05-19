@@ -11,6 +11,10 @@
                 <label>Kode</label>
                 <input class="form-control" name="kd_data_penginap" value="<?php echo $kode; ?>" readonly>
             </div>
+            <div class="form-group">
+                <label>NIK</label>
+                <input class="form-control" name="NIK" placeholder="NIK" required>
+            </div>
 			<div class="form-group">
                 <label>Nama Penginap</label>
                 <input class="form-control" name="nama_penginap" placeholder="Nama Lengkap" required>
@@ -22,6 +26,10 @@
 			<div class="form-group">
                 <label>No Telepon</label>
                 <input class="form-control" name="no_telp" placeholder="No Telepon" required>
+            </div>
+            <div class="form-group">
+                <label>File input</label>
+                <input type="file" name="fupload">
             </div>
 			<input type="submit" name="add" class="btn btn-sm btn-primary" value="Simpan">
 		</form>
