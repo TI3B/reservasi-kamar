@@ -24,11 +24,12 @@ class Kamar extends CI_Controller {
 			$data = array('kd_kamar' => $this->input->post('kd_kamar')
 						 ,'nama_kamar' => $this->input->post('nama_kamar')
 						 ,'kd_tipe_kamar' => $this->input->post('kd_tipe_kamar')
-						 ,'status' => $this->input->post('status'));
+						 ,'status' => 'Kosong');
 
 			$this->kamar_m->insert($data);
 			echo "<script>alert('Proses Input Data Berhasil :)'); window.location = '".base_url()."kamar'</script>";
 		}
+		$data['kode'] = $this->kamar_m->getKodeKamar();
 		$data['dropdown'] = $this->kamar_m->getAllTipeKamar();
 		$d['title'] = 'Tambah Kamar';
 		$this->load->view('header_v', $d);
