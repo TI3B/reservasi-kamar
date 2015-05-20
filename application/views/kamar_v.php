@@ -37,7 +37,7 @@
 										foreach ($kamar_m as $data)
 										{
 											echo"<tr>
-													<td>$data->kd_kamar.</td>
+													<td>$data->kd_kamar</td>
 													<td>$data->nama_kamar</td>
 													<td>$data->kd_tipe_kamar</td>
 													<td>$data->status</td>
