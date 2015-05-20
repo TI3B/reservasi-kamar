@@ -1,5 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+//perubahan pada getKodeKamar
 class Kamar_m extends CI_Model
 {
 
