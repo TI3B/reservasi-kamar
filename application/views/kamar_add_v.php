@@ -9,7 +9,7 @@
 		<form action="" method="post" role="form" enctype="multipart/form-data">
             <div class="form-group">
                 <label>Kode</label>
-                <input class="form-control" name="kd_kamar" placeholder="Masukkan Kode" required>
+                <input class="form-control" name="kd_kamar" value="<?php echo $kode; ?>" readonly>
             </div>
 			<div class="form-group">
 				<label>Tipe Kamar</label>
@@ -24,11 +24,7 @@
 			</div>
 			<div class="form-group">
                 <label>Nama Kamar</label>
-                <input class="form-control" name="nama_kamar" placeholder="Masukkan Harga" required>
-            </div>
-			<div class="form-group">
-                <label>Status</label>
-                <input class="form-control" name="status" placeholder="Masukkan Keterangan" required>
+                <input class="form-control" name="nama_kamar" placeholder="Nama Kamar" required>
             </div>
 			<input type="submit" name="add" class="btn btn-sm btn-primary" value="Simpan">
 		</form>
