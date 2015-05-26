@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://127.0.0.1/ci_reservasikamar';
+$config['base_url']	= 'http://localhost/git_reservasi-kamar';
 // $http = 'http' . ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 's' : '') . '://';
 // $newurl = str_replace("index.php","", $_SERVER['SCRIPT_NAME']);
 // $config['base_url']    = "$http" . $_SERVER['SERVER_NAME'] . "" . $newurl;
