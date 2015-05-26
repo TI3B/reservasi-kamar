@@ -12,7 +12,7 @@ class Dashboard extends CI_Controller {
 
 	public function index()
 	{
-		//$tipe_kamar = $this->tipe_kamar_m->selectAll();
+		$tipe_kamar = $this->tipe_kamar_m->selectAll();
 		$data['data'] = "<script type=\"text/javascript\">
     var chart1; // globally available
 	$(document).ready(function() {
