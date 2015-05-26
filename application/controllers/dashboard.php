@@ -1,5 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-//error_reporting(0);
+
 class Dashboard extends CI_Controller {
 
 	function __construct()
@@ -53,8 +53,7 @@ class Dashboard extends CI_Controller {
 						$jumlah++;
 					}
 				}
-				// $booking = $this->booking_m->jumlahTipeKamar('kd_kamar', $kd_kamar);
-				// $jumlah = $jumlah+$booking;
+				
 			}
 			$data['data'] .= "
 				{
