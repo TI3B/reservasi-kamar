@@ -20,6 +20,12 @@
     <!-- Custom Fonts -->
     <link href="<?php echo base_url(); ?>asset/sb-admin/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <link href="<?php echo base_url(); ?>/asset/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
+    <script src="<?php echo base_url(); ?>/asset/sb-admin/js/grafik/jquery.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>/asset/sb-admin/js/grafik/highcharts.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>/asset/sb-admin/js/time.js" type="text/javascript"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -27,9 +33,68 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <link rel="stylesheet" href="slimbox2.css" type="text/css" media="screen" /> 
+    <script src="<?php echo base_url(); ?>/asset/sb-admin/js/jumlah_otomatis/slimbox2.js" type="text/JavaScript" ></script> 
+    <script src="<?php echo base_url(); ?>/asset/sb-admin/js/jumlah_otomatis/jquery-1.6.2.min.js" language="javascript" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>/asset/sb-admin/js/jumlah_otomatis/jquery-ui-1.8.16.custom.min.js" language="javascript" type="text/javascript"></script>
+
+    <script type="text/javascript">
+     $(document).ready(function(){
+    //total
+        $('#bayar').bind('keyup',function() {
+            var total = $("#total").val();
+            var bayar = 0;
+            $('#bayar').each(function() {
+                if(this.value !='') bayar += parseInt(this.value,10);
+            });
+            $('#kembali').val(total-bayar);
+        });
+
+        $('#bayar_checkin').bind('keyup',function() {
+            var sisabayar = $("#sisabayar").val();
+            var bayar_checkin = 0;
+            $('#bayar_checkin').each(function() {
+                if(this.value !='') bayar_checkin += parseInt(this.value,10);
+            });
+            $('#kembali_checkin').val(bayar_checkin-sisabayar);
+        });
+
+    });
+
+    </script> 
+
+    <script language="JavaScript" type="text/javascript">
+
+    function hitungSelisihTanggal() {
+     
+        if($("#tanggal_checkin").val()!="" && $("#tanggal_checkout").val()!=""){
+     
+            var tanggal_checkin = new Date($("#tanggal_checkin").val());
+            var tanggal_checkout = new Date($("#tanggal_checkout").val());
+            var diff_date =  tanggal_checkout - tanggal_checkin;
+             
+            var years = Math.floor(diff_date/31536000000);
+            var months = Math.floor((diff_date % 31536000000)/2628000000);
+            var days = Math.floor(((diff_date % 31536000000) % 2628000000)/86400000);
+            $("#durasi").val(days);
+            //$("#Result").html(years+" year(s) "+months+" month(s) "+days+" and day(s)");
+
+
+            //hitung total bayar
+            var durasi = $("#durasi").val();
+            var harga = $("#harga").val();
+            $('#total').val(durasi*harga);
+        }
+        else{
+            alert("Anda belum memilih tanggal");
+            return false;
+        }
+    }
+    </script>
+
 </head>
 
-<body>
+<body onload="waktu()">
 
     <div id="wrapper">
 
@@ -43,8 +108,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="">SB Admin</a>
+                <span class="navbar-brand" id="waktu">Waktu</span>
             </div>
+
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
                 <li class="dropdown">
@@ -63,7 +129,7 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                     <li>
+                    <li>
                         <a href="<?php echo base_url(); ?>dashboard/"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
