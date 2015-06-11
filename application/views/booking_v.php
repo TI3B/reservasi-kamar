@@ -19,6 +19,7 @@
                 </div>
                 <!-- /.row -->
 
+                <!-- baris ini baru saja di tambahkan -->
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="table-responsive">
