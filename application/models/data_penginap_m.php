@@ -39,8 +39,8 @@ class Data_penginap_m extends CI_Model
   function selectBy($id)
   {
     $query = "SELECT * FROM tb_data_penginap where kd_data_penginap='$id'";
-	$db=$this->db->query($query);
-	return $db->result();
+  $db=$this->db->query($query);
+  return $db->result();
   }
 
   function insert($data)
