@@ -25,11 +25,9 @@
                                 <thead>
                                     <tr>
                                         <th><center>Kode</center></th>
-                                        <th><center>NIK</center></th>
                                         <th><center>Nama Penginap</center></th>
                                         <th><center>Alamat</center></th>
                                         <th><center>No Telepon</center></th>
-                                        <th><center>Foto KTP</center></th>
 										<th><center>Aksi</center></th>
                                     </tr>
                                 </thead>
@@ -40,11 +38,9 @@
 										{
 											echo"<tr>
 													<td><center>$data->kd_data_penginap</center></td>
-                                                    <td><center>$data->NIK</center></td>
 													<td><center>$data->nama_penginap</center></td>
 													<td><center>$data->alamat</center></td>
 													<td><center>$data->no_telp</center></td>
-                                                    <td><center><img src='".base_url()."/asset/images/$data->foto_ktp' width='150'></td>
 													<td><a href='".base_url()."data_penginap/edit/$data->kd_data_penginap'><button type='button' class='btn btn-sm btn-warning'>Ubah</button></a> <a href='".base_url()."data_penginap/delete/$data->kd_data_penginap'><button type='button' class='btn btn-sm btn-danger'>Hapus</button></a></td>
 												</tr>";
 												$no++;

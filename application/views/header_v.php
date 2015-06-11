@@ -139,9 +139,6 @@
                         <a href="<?php echo base_url(); ?>kamar/"><i class="fa fa-fw fa-table"></i> Kamar</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url(); ?>data_penginap/"><i class="fa fa-fw fa-desktop"></i> Penginap</a>
-                    </li>
-                    <li>
                         <a href="<?php echo base_url(); ?>booking/"><i class="fa fa-fw fa-edit"></i> Booking</a>
                     </li>
                     <li>
