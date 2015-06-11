@@ -6,24 +6,32 @@
 
 <div class="row">
     <div class="col-lg-6">
-		<form action="" method="post" role="form" enctype="multipart/form-data">
+        <form action="" method="post" role="form" enctype="multipart/form-data">
             <div class="form-group">
                 <label>Kode</label>
                 <input class="form-control" name="kd_data_penginap" value="<?php echo $kode; ?>" readonly>
             </div>
-			<div class="form-group">
+            <div class="form-group">
+                <label>NIK</label>
+                <input class="form-control" name="NIK" placeholder="NIK" required>
+            </div>
+            <div class="form-group">
                 <label>Nama Penginap</label>
                 <input class="form-control" name="nama_penginap" placeholder="Nama Lengkap" required>
             </div>
-			<div class="form-group">
+            <div class="form-group">
                 <label>Alamat</label>
                 <input class="form-control" name="alamat" placeholder="Alamat Lengkap" required>
             </div>
-			<div class="form-group">
+            <div class="form-group">
                 <label>No Telepon</label>
                 <input class="form-control" name="no_telp" placeholder="No Telepon" required>
             </div>
-			<input type="submit" name="add" class="btn btn-sm btn-primary" value="Simpan">
-		</form>
-	</div>
+            <div class="form-group">
+                <label>File input</label>
+                <input type="file" name="fupload">
+            </div>
+            <input type="submit" name="add" class="btn btn-sm btn-primary" value="Simpan">
+        </form>
+    </div>
 </div>
