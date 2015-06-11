@@ -71,7 +71,7 @@ class Data_penginap extends CI_Controller {
 						//Simpan file dalam ukuran sebenarnya
 						move_uploaded_file($lokasi_file, $vfile_upload);
 
-
+//mencoba mengubah data
 			$this->data_penginap_m->update($data,$id);
 			echo "<script>alert('Proses Edit Data Berhasil :)'); window.location = '".base_url()."data_penginap'</script>";
 		}
